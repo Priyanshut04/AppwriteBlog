@@ -11,8 +11,10 @@ function Signup() {
     const dispatch = useDispatch()
     const { register, handleSubmit } = useForm()
     const [error, setError] = useState('')
+    const [loading, setLoading] = useState(false)
 
     const create = async (data) => {
+        setLoading(true)
         setError('')
         try {
            const userData = await authService.createAccount(data) 
@@ -25,6 +27,7 @@ function Signup() {
         } catch (error) {
            setError(error.message) 
         }
+        setLoading(false)
     }
     return (
         <div className="flex items-center justify-center">
@@ -75,7 +78,7 @@ function Signup() {
                                 required: true,})}
                             />
                             <Button type="submit" className="w-full">
-                                Create Account
+                            {loading ? 'Loading...' : 'Create Account'} 
                             </Button>
                         </div>
                     </form>
