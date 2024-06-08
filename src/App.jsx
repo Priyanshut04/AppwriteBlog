@@ -27,7 +27,7 @@ function App() {
       <div className='w-full block'>
         <Header />
         <main className='m-4 p-4 bg-gray-400 rounded shadow-lg'>
-        Stay Informed: Check Out Our Blogs <Outlet/>
+        <h1 className='text-4xl font-bold'>THE BLOG</h1> <Outlet/>
         </main>
         <Footer />
       </div>

@@ -23,7 +23,7 @@ function Home() {
                     <div className="flex flex-wrap">
                         <div className="p-2 w-full">
                         <Link to="/login">
-                            <h1 className="text-2xl font-bold hover:text-gray-500 cursor-pointer">
+                            <h1 className="text-2xl hover:text-gray-500 cursor-pointer">
                                 Login to read posts
                             </h1>
                         </Link>
